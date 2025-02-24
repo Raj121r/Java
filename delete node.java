@@ -68,8 +68,10 @@ public static void main(String a[])
         obj.insert_at_begining(10);
         obj.print();
         obj.delete_at_begining();
+        obj.print();
         obj.delete_at_end();
-        obj.delete_at_position(4);
+        obj.print();
+        obj.delete_at_position(2);
         obj.print();
     }
 }
