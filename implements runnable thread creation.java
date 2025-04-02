@@ -24,3 +24,35 @@ public class My_thread implements Runnable
 		
 			}
 }   
+
+        //  Thread using sleep method
+
+
+// public class My_thread implements Runnable
+// {
+//     public void run()
+//     {
+        
+//             try 
+//                {
+//                 for(int i=1;i<16;i++)
+        
+//                     {
+//                         System.out.println(i);  
+//                         Thread.sleep(500);
+                
+//                     }
+//                 }
+//             catch(Exception e)
+//                 {
+                
+//                 }
+//     }
+// 	public static void main(String[] args) 
+// 	{
+// 	    My_thread m1=new My_thread();    
+	    
+// 	    Thread obj=new Thread(m1);     
+// 	    	    obj.start();
+// 	 }
+// }   
