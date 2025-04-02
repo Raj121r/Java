@@ -55,4 +55,83 @@ public class My_thread implements Runnable
 // 	    Thread obj=new Thread(m1);     
 // 	    	    obj.start();
 // 	 }
-// }   
+// }  
+
+
+// using sleep and join method together 
+
+
+  class A implements Runnable
+ {
+     public void run()
+     {
+               try
+                {
+                 for(int i=1;i<6;i++)
+        
+                     {
+                         System.out.println("From class A: "+i); 
+                         Thread.sleep(500);
+                     }
+                }  
+                catch(Exception a)
+                {
+                    
+                }
+                 
+     }
+ }
+     
+     class B implements Runnable
+     {
+     public void run()
+     {
+                try
+                {
+                 for(int i=1;i<6;i++)
+        
+                     {
+                         System.out.println("From class B: "+i); 
+                         Thread.sleep(500);
+                     }
+                }  
+                catch(Exception a)
+                {
+                    
+                }
+     }
+                 
+     }            
+     public class Main{
+     public static void main(String[] args) 
+ 	{
+ 	    A a1=new A();    
+	    
+ 	    Thread obj1=new Thread(a1);     
+ 	    	    obj1.start();
+ 	   
+ 	    try
+ 	    {
+ 	        obj1.join();
+ 	    } 
+ 	    catch(Exception e)
+ 	    {
+ 	        
+ 	    }
+ 	    
+ 	   
+ 	    B a2= new B();	    
+ 	    Thread obj2=new Thread(a2);     
+ 	    	    obj2.start();
+ 	    
+ 	    try 
+ 	    {
+ 	        obj2.join();
+ 	    } 
+ 	    catch(Exception e)
+ 	    {
+ 	        
+ 	    }	    
+ 	 }
+ }   
+
