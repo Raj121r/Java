@@ -1,0 +1,28 @@
+
+public class Exception_hand
+{
+    public int result(int t_marks, int t_sub) throws ArithmeticException
+    {
+        if(t_marks==0 || t_sub==0)
+        {
+            throw new ArithmeticException("subjects and marks can't be zero (0)");
+        }
+        else {
+            int avg_marks = t_marks / t_sub;
+            return avg_marks;
+        }
+    }
+    public static void main(String []a)
+    {
+        Exception_hand obj= new Exception_hand();
+       try {
+           int result = obj.result(567, 0);
+           System.out.println(result);
+       }
+       catch(ArithmeticException e)
+       {
+          System.out.println("caught Exception: "+e.getMessage());
+       }
+
+    }
+}
