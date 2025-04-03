@@ -35,6 +35,23 @@ public class Sorting {                  // ascending order
     }
 
 
+    public static int[] bubble_sort(int[] arr)
+     {
+         for(int i=0;i<(arr.length-1);i++){
+             for(int j=0;j<(arr.length-1-i);j++)
+             {
+                 if(arr[j]>arr[j+1])
+                 {
+                     int temp=arr[j];
+                     arr[j]=arr[j+1];
+                     arr[j+1]=temp;
+                 }
+             }
+         }
+         return arr;
+     }
+
+
     public static void main(String a[])
     {
         Scanner sc= new Scanner(System.in);
@@ -56,12 +73,21 @@ public class Sorting {                  // ascending order
 //            System.out.println(brr[i]);
 //        }
 
-        int brr1[]=new int[n];
-        brr1=insert_sort(arr);           // insertion sort method calling
+        // int brr1[]=new int[n];
+        // brr1=insert_sort(arr);           // insertion sort method calling
+        // System.out.println("sorted elements of array are: ");
+        // for(int i=0;i<n;i++)
+        // {
+        //     System.out.println(brr1[i]);
+        // }
+
+
+        int brr2[]=new int[n];
+        brr2=bubble_sort(arr);           // Bubble sort method calling
         System.out.println("sorted elements of array are: ");
         for(int i=0;i<n;i++)
         {
-            System.out.println(brr1[i]);
+            System.out.println(brr2[i]);
         }
 
     }
